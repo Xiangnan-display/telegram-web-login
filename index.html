@@ -25,6 +25,10 @@
             document.getElementById("name").innerHTML ="用户名："+user.first_name
             document.getElementById("hash").innerHTML ="hash："+ user.hash
             document.getElementById("auth_date").innerHTML ="auth_date："+user.auth_date
+            var aTag = document.createElement('a');
+            aTag.href = "https://t.me/XiangNan3_bot";
+            aTag.textContent = "点击这里访问我的 Telegram";
+            document.body.appendChild(aTag);
           }
         </script>
         <!-- <h1>Welcome to Telegram Mini App</h1>
