@@ -8,10 +8,10 @@
 </head>
 
 <body>
-    <div style="z-index: 9999999;">
+    <!-- <div style="z-index: 9999999;">
         <div>第三方登录2</div>
         <script async src="https://telegram.org/js/telegram-widget.js?22" data-telegram-login="XiangNan3_bot" data-size="large" data-onauth="onTelegramAuth(user)" data-request-access="write"></script>
-       </div>
+    </div>
        <div id="id"></div>
        <div id="name"></div>
        <div id="hash"></div>
@@ -26,6 +26,18 @@
             document.getElementById("hash").innerHTML ="hash："+ user.hash
             document.getElementById("auth_date").innerHTML ="auth_date："+user.auth_date
           }
+        </script> -->
+        <h1>Welcome to Telegram Mini App</h1>
+        <button id="telegram-login">Login with Telegram</button>
+        <script src="https://telegram.org/js/telegram-web-app.js"></script>
+        <script>
+            Telegram.WebApp.onEvent('auth', (user) => {
+                alert('Logged in as ' + user.first_name + ' ' + user.last_name + ' (' + user.id + (user.username ? ', @' + user.username : '') + ')');
+            });
+    
+            document.getElementById('telegram-login').addEventListener('click', () => {
+                Telegram.WebApp.login();
+            });
         </script>
 </body>
 
