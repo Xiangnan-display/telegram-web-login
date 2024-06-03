@@ -21,10 +21,10 @@
             console.log("用户信息",user);
             // alert('Logged in as ' + user.first_name + ' ' + user.last_name + ' (' + user.id + (user.username ? ', @' + user.username : '') + ')');
             alert('Logged in as Id'+user.id+"用户名称" + user.first_name + ' ' + user.hash + "auth_date:"+user.auth_date );
-            document.getElementById("id").innerHTML = user.id
-            document.getElementById("name").innerHTML = user.first_name
-            document.getElementById("hash").innerHTML = user.hash
-            document.getElementById("auth_date").innerHTML = user.auth_date
+            document.getElementById("id").innerHTML ="id"+ user.id
+            document.getElementById("name").innerHTML ="用户名"+user.first_name
+            document.getElementById("hash").innerHTML ="hash"+ user.hash
+            document.getElementById("auth_date").innerHTML ="auth_date"+user.auth_date
           }
         </script>
 </body>
