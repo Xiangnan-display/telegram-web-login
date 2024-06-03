@@ -27,7 +27,7 @@
             document.getElementById("auth_date").innerHTML ="auth_date："+user.auth_date
           }
         </script> -->
-        <!-- <h1>Welcome to Telegram Mini App</h1>
+        <h1>Welcome to Telegram Mini App</h1>
         <button id="telegram-login">Login with Telegram</button>
         <script src="https://telegram.org/js/telegram-web-app.js"></script>
         <script>
@@ -38,41 +38,6 @@
             document.getElementById('telegram-login').addEventListener('click', () => {
                 Telegram.WebApp.login();
             });
-        </script> -->
-        <h1>Welcome to Telegram Mini App</h1>
-        <div id="user-info"></div>
-        <script src="https://telegram.org/js/telegram-web-app.js"></script>
-        <script>
-            // 模拟Telegram Web App初始化数据
-            const mockInitData = {
-                user: {
-                    id: 123456789,
-                    first_name: "Test",
-                    last_name: "User",
-                    username: "testuser"
-                }
-            };
-    
-            // 使用模拟数据代替实际的初始化数据
-            window.Telegram = {
-                WebApp: {
-                    initDataUnsafe: mockInitData,
-                    ready: () => {
-                        console.log("Telegram Web App is ready");
-                    }
-                }
-            };
-    
-            // 初始化Telegram Web App
-            window.Telegram.WebApp.ready();
-    
-            // 获取用户信息并显示
-            const user = window.Telegram.WebApp.initDataUnsafe.user;
-            if (user) {
-                document.getElementById('user-info').innerHTML = `<p>Logged in as ${user.first_name} ${user.last_name} (${user.id})</p>`;
-            } else {
-                document.getElementById('user-info').innerHTML = `<p>Not logged in</p>`;
-            }
         </script>
 </body>
 
